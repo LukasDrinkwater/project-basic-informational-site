@@ -25,6 +25,8 @@ app.get("/contact-me", (req, res) => {
   res.sendFile(path.join(__dirname, "contact-me.html"));
 });
 
+// any other path goes to the 404 error page
+
 app.get("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
